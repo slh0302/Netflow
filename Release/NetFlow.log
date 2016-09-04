@@ -1,0 +1,28 @@
+﻿生成启动时间为 2016/8/27 12:11:09。
+     1>项目“E:\学习\C++\pro\NetFlow\NetFlow\NetFlow.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DataAchieve.cpp boostUdp.cpp
+         DataAchieve.cpp
+         Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+         - add -D_WIN32_WINNT=0x0501 to the compiler command line; or
+         - add _WIN32_WINNT=0x0501 to your project's Preprocessor Definitions.
+         Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+         boostUdp.cpp
+         Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+         - add -D_WIN32_WINNT=0x0501 to the compiler command line; or
+         - add _WIN32_WINNT=0x0501 to your project's Preprocessor Definitions.
+         Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\学习\C++\pro\NetFlow\NetFlow\Release\NetFlow.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\学习\C++\pro\NetFlow\NetFlow\Release\NetFlow.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\学习\C++\pro\NetFlow\NetFlow\Release\NetFlow.lib" /MACHINE:X86 /SAFESEH Release\boostUdp.obj
+         Release\DataAchieve.obj
+         Release\get_config.obj
+         Release\V5.obj
+         Release\v9.obj
+         正在生成代码
+         已完成代码的生成
+         NetFlow.vcxproj -> E:\学习\C++\pro\NetFlow\NetFlow\Release\NetFlow.exe
+     1>已完成生成项目“E:\学习\C++\pro\NetFlow\NetFlow\NetFlow.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:14.29

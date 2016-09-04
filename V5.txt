@@ -1,0 +1,31 @@
+﻿Version 5标头:
+字节位移 	长度 	内容 			描述 													类型
+0-1 		2 		version 		NetFlow输出格式的版本号。 								int
+2-3 		2 		count 			输出到这个数据包的信息流的个数（1-30）。 					int 
+4-7 		4 		SysUptime 		自路由器启动时起，到当前的时间，以毫秒为单位。 
+8-11		4		nix_secs 		自从0000 UTC 1970开始，到当前的秒数。 
+12-15 		4 		unix_nsecs 		自从0000 UTC 1970开始，到当前残余的毫微秒数。 
+16-19 		4 		flow_sequence 	已经看到的所有信息流的序列计数器。 
+20 			1 		engine_type 		Type of flow-switching engine 
+21 			1 		engine_id 		Slot number of the flow-switching engine 
+22-23 		2 		reserved 		未用的（即内容为0的）字节。
+
+24字节:
+版本5信息流记录格式 
+字节位移 	长度 	内容 			描述 
+0-3 		4 		srcaddr 			源头的IP地址。 
+4-7 		4 		dstaddr 			目的地的IP地址。 
+8-11 		4 		nexthop 			下一网络段路由器的IP地址。 
+12-13 		2 		input 			输入接口的SNMP索引。 
+14-15 		2 		output 			输出接口的SNMP索引。 
+16-19 		4 		dPkts 			信息流中的数据包。 
+20-23 		4 		dOctets 			在信息流的数据包中，第3层（Layer 3）字节的总个数。 
+24-27 		4	 	First 			信息流开始时的SysUptime。 
+28-31 		4 		Last 			信息流的最后一个数据包被接收时的SysUptime。 
+32-33 		2 		srcport 			TCP/UDP源头的端口号或等值物。 
+34-35 		2 		dstport 			TCP/UDP目的地的端口号或等值物。 
+36 			1 		pad1 			未使用的（即内容为0的）字节 
+37 			1 		tcp_flags 		TCP标志的Cumulative OR 
+38 			1 		prot 			IP协议（例如，6=TCP，17=UDP） 
+39 			1 		tos 				IP服务类型。 
+40-41 		2 		src_as 			源头的AS，或者是最初的AS，或者是同等的AS 

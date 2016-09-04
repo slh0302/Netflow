@@ -1,0 +1,47 @@
+NetFlow v9.0
+header
+Bytes			Contents			Description
+0-1				version				NetFlow 输出版本号
+2-3				count				count表示该包里所包含的template或者data flowset的数量
+4-7				sys_uptime			Current	time in milliseconds since the export device booted.
+8-11				unix_secs			Current	count of seconds since 0000 UTC 1970.
+12-15			package_sequence	用于检查是否漏掉了导出的数据包
+16-19			source_id	
+
+Neflow v9 Template FlowSet格式
+
+bit 0-15
+flowset_id = 0
+length
+template_id
+field_count
+field_1_type
+field_1_length
+field_2_type
+field_2_length
+field_3_type
+field_3_length
+...
+field_N_type
+field_N_length
+template_id
+field_count
+field_1_type
+field_1_length
+...
+field_N_type
+field_N_length
+
+FlowSet ID：用于区分template record与data record。
+			其中模板记录的flowset ID在0到255之间，
+			目前是描述flow data的template的flowset ID为0，
+			描述option data的template的flowset ID为1，
+			数据记录的flowset ID为256及其以上。
+Template ID：每个template id对应一个模板记录，如前所述，
+			因为每个设备可能会产生多个模板，通常从256开始记。
+****Field Count：记录模板中的字段数
+				因为一个Template FlowSet中也可能包含多个Template Record模板记录，
+				所以field count给出某个模板记录所包含的域的数量，以便定位到下一个模板记录。
+Field Type: 
+				就是模板记录用于定义数据记录将导出哪些信息，
+			
